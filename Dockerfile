@@ -1,7 +1,8 @@
 FROM timperry1994/jenkins-slave:1.0
 
-COPY ./target /opt/
+ENV JAVA_HOME /opt/jdk1.8.0_121
+COPY ./target /opt
 
-WORKDIR /opt/
+WORKDIR /opt
 
-ENTRYPOINT ["./target/nexus-base-template-*/bin/nexus console"]
+ENTRYPOINT /opt/nexus-base-template-3.2.0-SNAPSHOT/bin/nexus console
