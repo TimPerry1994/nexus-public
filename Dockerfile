@@ -1,4 +1,4 @@
-FROM timperry1994/jenkins-slave
+FROM timperry1994/jenkins-slave:1.0
 
 COPY ./target /opt/
 
